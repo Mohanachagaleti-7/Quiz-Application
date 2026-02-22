@@ -1,0 +1,63 @@
+#  Quiz Application
+
+quiz = [
+    {
+        "question": "1. What is the output of 2 + 2?",
+        "options": ["A) 3", "B) 4", "C) 5", "D) 6"],
+        "answer": "B",
+        "explanation": "2 + 2 equals 4."
+    },
+    {
+        "question": "2. Which keyword is used to define a function in Python?",
+        "options": ["A) func", "B) define", "C) def", "D) function"],
+        "answer": "C",
+        "explanation": "In Python, 'def' keyword is used to define a function."
+    },
+    {
+        "question": "3. Which data type is used to store multiple values?",
+        "options": ["A) int", "B) string", "C) list", "D) float"],
+        "answer": "C",
+        "explanation": "List is used to store multiple values in Python."
+    }
+]
+
+score = 0
+wrong_count = 0
+max_wrong = 3
+
+for q in quiz:
+    while True:
+        print("\n" + q["question"])
+        for option in q["options"]:
+            print(option)
+
+        user_answer = input("Enter your answer (A/B/C/D): ").upper()
+
+        if user_answer == q["answer"]:
+            print("Correct ✅")
+            score += 1
+            break   # Move to next question
+        else:
+            print("Wrong ❌")
+            print("Explanation:", q["explanation"])
+            score -= 0.25      # Negative marking
+            wrong_count += 1
+
+            if wrong_count == max_wrong:
+                print("\nYou have entered 3 wrong answers.")
+                print("Quiz Terminated ❌")
+                break
+
+    if wrong_count == max_wrong:
+        break
+
+print("\nQuiz Completed 🎉")
+print("Final Score:", score, "/", len(quiz))
+
+percentage = (score / len(quiz)) * 100
+print("Percentage:", percentage, "%")
+
+if percentage >= 70:
+    print("Result: Pass 🎯")
+else:
+    print("Result: Fail 😢")
