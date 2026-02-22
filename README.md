@@ -19,11 +19,11 @@ Multiple Choice Questions
 
 *Python
 
-#How It Works
+#How It Works:
 
 The application displays questions one by one and accepts user input. It checks answers, updates the score, applies negative marking for wrong answers, and calculates the final percentage. Based on the score, it displays whether the user has passed or failed.
 
-#How to Run
+#How to Run:
 
 Install: Python
 
