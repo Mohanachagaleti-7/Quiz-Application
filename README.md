@@ -5,9 +5,13 @@ A console-based Quiz Application developed using Python. The program stores ques
 
 Multiple Choice Questions
 ->Automated Score Calculation
+
 ->Negative Marking
+
 ->Explanation for Incorrect Answers
+
 ->Pass/Fail Evaluation
+
 ->Quiz Termination After 3 Wrong Attempts
 
 #🛠 Technologies Used:
